@@ -1,6 +1,6 @@
 import { Line } from 'react-chartjs-2';
 
-const HumiChart = (props: any) => {
+const H2sChart = (props: any) => {
     var sensorValue = props.sensor_value;
     var receiveTime = props.receive_time;
 
@@ -13,7 +13,7 @@ const HumiChart = (props: any) => {
             },
             title: {
                 display: true,
-                text: 'Humidity',
+                text: 'H2S',
             }
         }
     };
@@ -21,7 +21,7 @@ const HumiChart = (props: any) => {
         labels: receiveTime,
         datasets: [
             {
-                label: 'Humidity',
+                label: 'H2S',
                 data: sensorValue,
                 borderColor: 'rgb(255, 99,132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -34,4 +34,4 @@ const HumiChart = (props: any) => {
     return <Line options={options} data={data} style={{position: "relative", height: "200px"}} />
 }
 
-export default HumiChart;
+export default H2sChart;
